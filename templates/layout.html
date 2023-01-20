@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-------------------------------------------------------------------------------------------------------
+   <style>
+    body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+
+
+
+------------------------------------------------------------------------------------------------------------>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Welcome to Articly</title>
+     
+   
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    
+    {% include 'includes/_navbar.html' %}
+    <div class="container">
+      {% include 'includes/_messages.html' %}
+      {% block body %}{% endblock %}
+    </div>
+ 
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript">
+      CKEDITOR.replace('editor')
+    </script>
+    
+    <footer class="my-5 pt-5 text-center text-small">
+      
+      <p class="mb-1">&copy; 2017–2023 Articly</p>
+      <ul class="list-inline">
+          <li class="list-inline-item  "><a href="#">Privacy</a></li>
+          <li class="list-inline-item  "><a href="#">Terms</a></li>
+          <li class="list-inline-item  "><a href="#">Support</a></li>
+      </ul>
+    
+  </footer>
+
+  </body>
+</html>
